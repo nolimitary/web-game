@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survive the Horde</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #1a1a1a;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            user-select: none;
+        }
+        canvas {
+            display: block;
+        }
+        #ui {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            pointer-events: none;
+            text-shadow: 2px 2px 0px #000;
+        }
+        h1, h3 { margin: 5px 0; }
+        .skill {
+            color: #f1c40f;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .ready { color: #2ecc71; }
+        .cooldown { color: #e74c3c; }
+    </style>
+</head>
+<body>
+    <div id="ui">
+        <h1>Score: <span id="score">0</span></h1>
+        <h3>Level: <span id="level">1</span> (Gun Upgrades)</h3>
+        <div class="skill">DASH [SPACE]: <span id="dashStatus" class="ready">READY</span></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    
+    <script src="game.js"></script>
+</body>
+</html>
